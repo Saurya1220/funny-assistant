@@ -77,7 +77,7 @@ if st.button("Ask Me Anything"):
     if question.strip():  # If the question is not empty
         
         randIndex = random.randrange(0, len(responses))
-        response = random.choice(responses[randIndex])
+        response = responses[randIndex]
         
         st.write(f"Your Assistant says: **{response}**")
         
