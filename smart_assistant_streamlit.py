@@ -79,7 +79,7 @@ st.write("Ask me any question, and I \'ll answer it. I can even predict the futu
 
 # Create a text input box for the user to enter their question
 # Create a text input box for the user to enter their question
-question = st.text_input("What do you want me to predict?:", value=st.session_state.question)
+question = st.text_input("What do you want me to predict?", value=st.session_state.question)
 
 # When the user clicks the button, show the Magic 8-Ball response
 if st.button("Ask Me Anything"):
