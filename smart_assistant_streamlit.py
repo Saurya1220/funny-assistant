@@ -89,7 +89,7 @@ if st.button("Ask Me Anything"):
         response = responses[randIndex]
 
         st.session_state.history.append((question, response))  # Append question and response to history
-        st.write(f"Your Assistant says:  **{response}**")
+        st.write(f"Smart Predictor says:  **{response}**")
         st.session_state.question = ""  # Reset the input field after the button is clicked
         
     else:
@@ -102,7 +102,7 @@ st.write("")
 st.write("")
 st.write("")
 st.write("")
-st.write("History:")
+st.subheader("**Chat History:**")
 for i, (q, r) in enumerate(st.session_state.history, 1):
     st.write(f"**You:** {q}")
     st.write(f"**Assistant:** {r}")
