@@ -70,11 +70,12 @@ import streamlit as st
 if 'history' not in st.session_state:
     st.session_state.history = []
 
-st.title("Your Smart Assistant!")
+st.title("Smart Future Predictor!")
 st.write("Ask me any question, and I \'ll answer it. I can even predict the future and help you out!")
 
 # Create a text input box for the user to enter their question
-question = st.text_input("What is your question: ")
+# Create a text input box for the user to enter their question
+question = st.text_input("What do you want me to predict?:", value=st.session_state.question)
 
 # When the user clicks the button, show the Magic 8-Ball response
 if st.button("Ask Me Anything"):
@@ -85,14 +86,14 @@ if st.button("Ask Me Anything"):
 
         st.session_state.history.append((question, response))  # Append question and response to history
         st.write(f"Your Assistant says:  **{response}**")
-        question = "" # reset the input box
+        st.session_state.question = ""  # Reset the input field after the button is clicked
         
     else:
         
         st.write("You must ask something!")
 
 # Display the history of questions and responses
-st.write("### Conversation History:")
+st.write("History:")
 for i, (q, r) in enumerate(st.session_state.history, 1):
     st.write(f"**You:** {q}")
     st.write(f"**Assistant:** {r}")
