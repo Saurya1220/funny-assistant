@@ -97,6 +97,11 @@ if st.button("Ask Me Anything"):
         st.write("You must ask something!")
 
 # Display the history of questions and responses
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
 st.write("History:")
 for i, (q, r) in enumerate(st.session_state.history, 1):
     st.write(f"**You:** {q}")
