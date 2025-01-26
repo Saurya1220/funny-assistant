@@ -66,6 +66,10 @@ responses = [
 
 import streamlit as st
 
+# Initialize session state to store history if not already done
+if 'history' not in st.session_state:
+    st.session_state.history = []
+
 st.title("Your Smart Assistant is here!")
 st.write("I am the smartest assistant you will ever work with. Ask me any question, and I \'ll answer it. I can explain anything thing for you, search the internet on a topic or even predict the future and help you out!")
 
@@ -79,7 +83,7 @@ if st.button("Ask Me Anything"):
         randIndex = random.randrange(0, len(responses))
         response = responses[randIndex]
 
-        st.append(f"You asked:  **{question}**")
+        st.session_state.history.append((question, response))  # Append question and response to history
         st.append(f"Your Assistant says:  **{response}**")
         
     else:
