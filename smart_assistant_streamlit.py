@@ -84,9 +84,13 @@ if st.button("Ask Me Anything"):
         response = responses[randIndex]
 
         st.session_state.history.append((question, response))  # Append question and response to history
-        st.append(f"Your Assistant says:  **{response}**")
+        st.write(f"Your Assistant says:  **{response}**")
         
     else:
         
         st.write("You must ask something!")
 
+# Display the history of questions and responses
+st.write("### Conversation History:")
+for i, (q, r) in enumerate(st.session_state.history, 1):
+    st.write(f"{i}. **Q:** {q} \n**A:** {r}")
