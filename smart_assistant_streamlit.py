@@ -70,6 +70,10 @@ import streamlit as st
 if 'history' not in st.session_state:
     st.session_state.history = []
 
+# Initialize session state for question input
+if 'question' not in st.session_state:
+    st.session_state.question = ""
+    
 st.title("Smart Future Predictor!")
 st.write("Ask me any question, and I \'ll answer it. I can even predict the future and help you out!")
 
