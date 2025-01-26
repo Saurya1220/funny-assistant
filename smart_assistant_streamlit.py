@@ -79,7 +79,7 @@ if st.button("Ask Me Anything"):
         randIndex = random.randrange(0, len(responses))
         response = responses[randIndex]
 
-        st.append(f" You asked: **{question}**)
+        st.append(f"You asked:  **{question}**")
         st.append(f"Your Assistant says:  **{response}**")
         
     else:
