@@ -93,5 +93,5 @@ if st.button("Ask Me Anything"):
 # Display the history of questions and responses
 st.write("### Conversation History:")
 for i, (q, r) in enumerate(st.session_state.history, 1):
-    st.write(f"**You asked: ** {q}")
-    st.write(f"**Your Assistant said:** {r}")
+    st.write(f"**You:** {q}")
+    st.write(f"**Assistant:** {r}")
