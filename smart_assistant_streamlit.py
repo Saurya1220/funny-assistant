@@ -91,7 +91,7 @@ if st.button("Ask Me Anything"):
         st.session_state.history.append((question, response))  # Append question and response to history
         st.write(f"Your Assistant says:  **{response}**")
         st.session_state.question = ""  # Reset the input field after the button is clicked
-        
+        st.experimental_rerun()
     else:
         
         st.write("You must ask something!")
